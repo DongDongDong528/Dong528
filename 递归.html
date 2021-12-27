@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>递归</title>
+</head>
+<body>
+    <script>
+        // “要理解递归，首先要理解递归。”
+        function factorial(number) {
+            if (number < 0) return undefined;
+            let total = 1;
+            for (let n = number;n>1;n--) {
+                total = total * n;
+            }
+            return total;
+        }
+        console.log(factorial(5));
+
+        //递归实现
+       function factorial2(n) {
+            if (n === 1 || n === 0) {
+                return 1;
+            }   
+            return n * factorial2(n-1);
+       }
+       console.log(factorial2(5));
+       </script>
+</body>
+</html>
